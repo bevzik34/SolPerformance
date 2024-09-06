@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 class="titre">Quelques prestations de Sol</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-4" *ngFor="let performance of performances">
+      <div class="card">
+        <img
+          [src]="performance.image"
+          class="card-img-top"
+          alt="{{ performance.title }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ performance.title }}</h5>
+          <p class="card-text">{{ performance.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

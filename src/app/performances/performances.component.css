@@ -1,0 +1,42 @@
+/* Style CSS personnalisé */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  width: 80%; /* Largeur des cartes */
+  margin: 0 auto; /* Centrer les cartes */
+  margin-bottom: 20px; /* Espacement entre les cartes */
+}
+
+img {
+  align-self: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer le contenu dans le conteneur */
+}
+
+.titre {
+  text-align: center;
+}

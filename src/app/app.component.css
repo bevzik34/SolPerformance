@@ -1,0 +1,23 @@
+.menuSmallScreen {
+  transform: translateX(-1000%);
+  transition: transform 0.5s;
+  position: fixed;
+  top: 10%;
+  z-index: 1000;
+  width: 30%;
+  height: 100%;
+}
+.menuSmallScreen.open {
+  transform: translateX(00%);
+  transition: transform 0.5s;
+  position: fixed;
+  top: 10%;
+  width: 30%;
+  height: 100%;
+  z-index: 1000;
+}
+.menu {
+  position: fixed;
+  top: 10%;
+  z-index: 1000;
+}

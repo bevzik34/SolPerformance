@@ -1,0 +1,97 @@
+.navlinks {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 49%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  padding-left: 12%;
+  padding-right: 12%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navlinks a {
+  text-decoration: none;
+  position: relative;
+  color: white; /* Couleur du texte */
+  transition: color 0.3s; /* Animation de transition de couleur */
+}
+
+.navlinks a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Positionnement du soulignement par rapport au texte */
+  left: 0; /* Début du soulignement depuis la gauche */
+  width: 0; /* Largeur initiale du soulignement */
+  height: 2px; /* Hauteur du soulignement */
+  background-color: white; /* Couleur du soulignement */
+  transition: width 0.3s; /* Animation de transition de largeur */
+}
+
+.navlinks a:hover::before {
+  width: 100%; /* Largeur maximale du soulignement */
+}
+
+.navlinks a:hover {
+  color: white; /* Couleur du texte au survol */
+}
+
+.smallScreen {
+  position: absolute;
+  display: none;
+  padding-top: 20px;
+  padding-left: 20px;
+  z-index: 1000;
+}
+
+.smallScreen .hamburger-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.smallScreen .bar {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.smallScreen .hamburger-menu.open .bar:nth-child(1) {
+  transform: translateY(12.5px) rotate(45deg);
+}
+
+.smallScreen .hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.smallScreen .hamburger-menu.open .bar:nth-child(3) {
+  transform: translateY(-12.5px) rotate(-45deg);
+}
+
+.smallScreen .smallNavlinks {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navlinks {
+    display: none;
+  }
+
+  .smallScreen {
+    display: block;
+    z-index: 1000;
+  }
+}

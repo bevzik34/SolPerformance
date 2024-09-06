@@ -1,0 +1,13 @@
+<div class="navlinks">
+  <a routerLink="/" (click)="handleClick($event)">ACCUEIL</a>
+  <a routerLink="/about" (click)="handleClick($event)">ABOUT SOL</a>
+  <a routerLink="/performances" (click)="handleClick($event)">PERFORMANCES</a>
+  <a routerLink="/contacts" (click)="handleClick($event)">CONTACTS</a>
+</div>
+<div class="smallScreen">
+  <div class="hamburger-menu" [class.open]="isMenuOpen" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</div>

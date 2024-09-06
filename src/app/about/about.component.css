@@ -1,0 +1,79 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-cube";
+
+.contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.caroussel {
+  position: relative;
+  top: 390px;
+  left: 8%;
+  width: 80%;
+  z-index: -1000;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 95px;
+  width: 80%;
+  left: 10%;
+}
+
+h1,
+p,
+h3 {
+  color: white;
+  text-align: center;
+}
+
+.slider-efectCube {
+  width: 80%;
+  height: 20%;
+}
+.sliderContent {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sliderContent h3,
+.sliderContent p {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+h3 {
+  background-color: gray;
+  padding: 1%;
+  border-radius: 15px;
+}
+
+img {
+  width: 40%;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .caroussel {
+    position: relative;
+    top: 500px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .caroussel {
+    position: relative;
+    top: 600px;
+  }
+}

@@ -1,0 +1,36 @@
+.smallNavlinks {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+a {
+  background-color: rgba(0, 0, 0, 0.534);
+  border-radius: 10px;
+  font-size: xx-large;
+  padding-top: 30px;
+  text-decoration: none;
+  position: relative;
+  color: white; /* Couleur du texte */
+  transition: color 0.3s; /* Animation de transition de couleur */
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Positionnement du soulignement par rapport au texte */
+  left: 0; /* Début du soulignement depuis la gauche */
+  width: 0; /* Largeur initiale du soulignement */
+  height: 2px; /* Hauteur du soulignement */
+  background-color: white; /* Couleur du soulignement */
+  transition: width 0.3s; /* Animation de transition de largeur */
+}
+
+a:active::before {
+  width: 100%; /* Largeur maximale du soulignement */
+}
+
+a:active {
+  color: white; /* Couleur du texte au survol */
+}
